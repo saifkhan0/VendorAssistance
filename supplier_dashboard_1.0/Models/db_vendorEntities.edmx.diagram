@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c93cd7560c804cb3b93eb187e124e996" Name="Diagram1">
+        <EntityTypeShape EntityType="db_vendorModel.db_User" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.DC_invoice" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.DC_items" Width="1.5" PointX="8.125" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.general_sales_Invoice" Width="1.5" PointX="7.5" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.general_sales_items" Width="1.5" PointX="9.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.item" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.item_brand" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.item_category" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.PO" Width="1.5" PointX="7.5" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.PO_items" Width="1.5" PointX="12.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.quotation" Width="1.5" PointX="5.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.quotation_items" Width="1.5" PointX="10.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.ST_invoice" Width="1.5" PointX="9.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.ST_items" Width="1.5" PointX="12" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.system_order" Width="1.5" PointX="5.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.user_desc" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_vendorModel.User_item" Width="1.5" PointX="6.125" PointY="10.125" IsExpanded="true" />
+        <AssociationConnector Association="db_vendorModel.FK__db_User__user_de__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__DC_invoic__suppl__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__general_s__suppl__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__PO__userID__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__quotation__custo__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__quotation__vendo__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__system_or__custo__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__system_or__suppl__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__User_item__userI__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__DC_invoic__PO_Co__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__DC_items__DC_inv__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__general_s__Invoi__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__general_s__PO_co__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__general_s__quota__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__general_s__item___6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__item__item_brand__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__item__item_categ__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__PO_items__item_c__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__quotation__item___5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__ST_invoic__suppl__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__User_item__item___05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__PO__order_ID__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__PO__quotation_co__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__PO_items__PO_cod__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__ST_invoic__PO_co__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__quotation__quota__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__ST_invoic__quota__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="db_vendorModel.FK__ST_items__ST_Inv__60A75C0F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

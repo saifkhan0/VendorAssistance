@@ -1,0 +1,254 @@
+﻿@model supplier_dashboard_1._0.Models.Bidding_Window_ViewModel
+
+@{
+    ViewBag.Title = "Bidding Window - Vendor Assistance";
+    Layout = "~/Views/Masterpages/Layout_dashboard.cshtml";
+}
+<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+<style>
+    .search-container {
+        float: right;
+    }
+
+    .w3-dropdown-click, .w3-dropdown-hover {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .w3-black, .w3-hover-black:hover {
+        color: #fff !important;
+        background-color: #000 !important;
+    }
+
+    button:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    .w3-btn, .w3-button {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .w3-btn, .w3-button {
+        border: none;
+        display: inline-block;
+        padding: 8px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        background-color: inherit;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    button, input, select, textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+        button, html input[type=button], input[type=reset], input[type=submit] {
+            -webkit-appearance: button;
+            cursor: pointer;
+        }
+
+    .dropbtn {
+        background-color: #4242f5;
+        color: white;
+        padding: 9px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #4242f5;
+        }
+
+    .dropdown {
+        float: right;
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        right: 0;
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
+
+    input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+    }
+
+    .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+
+        .search-container button:hover {
+            background: #ccc;
+        }
+
+    body {
+        font-size: 13px;
+    }
+</style>
+
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("Demo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<br /><br />
+<h2>Submit your proposal for quotation no: @Session["fullname"] for : @Session["company"]</h2>
+<br />
+<div class="search-container" style="float:right; margin-top: -64px;  margin-right: 122px;">
+    <form>
+        <input type="text" placeholder="Search Item ..." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+</div>
+
+<div id="bidding Window" style="width:1000px;margin-left: 30px; ">
+    <div class="dropdown" style="margin-right: 16px;margin-top: -56px;">
+        <button onclick="myFunction()" class="dropbtn">Search by...</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">By Item Code</a>
+            <a href="#about">By Item Name</a>
+            <a href="#contact">By Item Brand</a>
+        </div>
+    </div>
+</div>
+<br />
+<table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Item Code</th>
+            <th>Item Name</th>
+            <th>Brand</th>
+            <th>Specification</th>
+            <th>Rate</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+
+            <td class="dropdown">
+                <a class="btn btn-default actionButton"
+                   data-toggle="dropdown" href="#">Action</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td class="dropdown">
+                <a class="btn btn-default actionButton"
+                   data-toggle="dropdown" href="#">Action</a>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+            <td>Otto</td>
+
+            <td class="dropdown">
+                <a class="btn btn-default actionButton"
+                   data-toggle="dropdown" href="#">Action</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ul id="contextMenu" class="dropdown-menu" role="menu">
+    <li><a tabindex="-1" href="#" class="payLink">Add To Quotation</a></li>
+    <li><a tabindex="-1" href="#" class="delLink">Remove from Quotation</a></li>
+    <li><a tabindex="-1" href="#" class="delLink">Update Item</a></li>
+</ul>

@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+@{ 
+    if (Session["UI"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/fonts/font-awesome.min.css">
+    <title>@ViewBag.Title</title>
+    <link href="/Content/asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/asset/fonts/simple-line-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/Content/asset/css/styles.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function navs() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <style type="text/css">
+        body{
+            font-size:13px;
+        }
+        .topnav a.active {
+            background-color: #000000;
+            color: white;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+            .topnav .icon {
+                display: none;
+            }
+
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+    </style>
+    <style type="text/css">
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+        .active, .navbar:hover {
+            background-color: #666;
+            color: white;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+
+        .topnav.responsive {
+            position: relative;
+        }
+
+            .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+        .navbar {
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .navbar {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px
+        }
+
+        a {
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .active, .navigationbar:hover {
+            background-color: #666;
+            color: white;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+          
+
+            .topnav a.active {
+                background-color: black;
+                color: white;
+            }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: black;
+                    color: white;
+                }
+                .topnav a.inactive{
+                    background-color:white;
+                    color:black;
+                }
+                .search-container {
+                    float: right;
+                }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+
+        .topnav.responsive {
+            position: relative;
+        }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var $page = jQuery.url.attr("file");
+            $('navigationbar').each(function () {
+                var $href = $(this).attr('href');
+                if (($href == $page) || ($href == '')) {
+                    $(this).addClass('on');
+                } else {
+                    $(this).removeClass('on');
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <link href="/Content/asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/asset/fonts/simple-line-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="/Content/asset/css/styles.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navigationbar" style="  margin: 0; font-family: Arial, Helvetica, sans-serif;">
+        <div class="topnav" id="myTopnav">
+            @{string sess = Session["UI"].ToString(); }
+            @Html.ActionLink(sess, "Homepage", "Dashboard")
+            @Html.ActionLink("Bidding Window", "Index", "BiddingWindow")
+            @Html.ActionLink("Order Panel", "Index", "OrderPanel")
+            @Html.ActionLink("Contact Us", "contact_us", "Dashboard")
+            @Html.ActionLink("Profile", "supplier_profile", "Profile")
+            <a href="@Url.Action("LogOut","Home")"> <span class="glyphicon glyphicon-log-out"></span> - Log Out</a>
+            <a href="javascript:void(0);" class="icon" onclick="navs()">
+
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 style="padding-left: 20px;"><img src="/Content/asset/img/logo_vendor_assistance.ico" style="margin-left: 30px;vertical-align: middle;width:100px"><br />Vendor Assistance</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="@Url.Action("Index", "Dashboard")">
+                        <i class="glyphicon glyphicon-home"></i>
+
+                        @Session["UI"].ToString()
+
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "BiddingWindow")">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                        Bidding Window
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-link"></i>
+                        Order Panel
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-paperclip"></i>
+                        Contact us
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-send"></i>
+                        Profile
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Page Content Holder -->
+        <div id="managecontent" style="height: 1000px">
+            <div id="content">
+            </div>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    <div style="background-color: rgba(82, 82, 82, 1);;background-size:cover;background-repeat:no-repeat;margin-bottom: -15px;">
+        <div class="container">
+
+            <ul class="list-inline" id="text_decoration" style="margin-top:20px;font-family:ABeeZee, sans-serif;">
+                <li class="list-inline-item"><a class="decoration" style="color:rgb(193,184,184);font-size:15px;margin-right:10px;" href="@Url.Action("Index", "Dashboard")">HT Traders</a></li>
+                <li class="list-inline-item"><a style="font-size:15px;color:rgb(193,184,184);margin-right:10px;" href="@Url.Action("Index", "BiddingWindow")">Bidding Window</a></li>
+                <li class="list-inline-item"><a style="font-size:15px;color:rgb(193,184,184);margin-right:10px;" href="#">Orders Panel</a></li>
+                <li class="list-inline-item"><a style="color:rgb(193,184,184);font-size:15px;margin-right:10px;" href="#">Profile</a></li>
+                <li class="list-inline-item"><a style="color:rgb(193,184,184);font-size:15px;" href="#">Contact us</a></li>
+            </ul>
+            <p class="text-center" style="color:rgb(193,184,184);font-family:ABeeZee, sans-serif;">Omer and Saif &copy; 2019</p>
+        </div>
+    </div>
+
+</body>
+</html>
